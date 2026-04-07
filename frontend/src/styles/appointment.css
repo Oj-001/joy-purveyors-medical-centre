@@ -1,0 +1,110 @@
+/* PAGE WRAPPER */
+.appointment-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 10%;
+  justify-content: center;
+  align-items: stretch; /* 👈 makes both sides same height */
+  background: #f9f9f9;
+  box-sizing: border-box;
+}
+
+/* IMAGE SECTION */
+.appointment-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.appointment-image img {
+  width: 100%;
+  height: 100%; /* 👈 make image fill container height */
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* APPOINTMENT CARD */
+.appointment-card {
+  flex: 1;
+  min-width: 300px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center content */
+}
+
+/* FORM CONTENT */
+.appointment-card h1 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  text-align: center;
+}
+
+.appointment-card form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.appointment-card label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.appointment-card input,
+.appointment-card textarea,
+.appointment-card select {
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.appointment-card select {
+  appearance: none;
+  background: #fff url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='8'><polygon points='0,0 14,0 7,8' fill='%23999'/></svg>") no-repeat right 12px center;
+  background-size: 12px;
+  cursor: pointer;
+}
+
+/* BUTTON */
+.appointment-card button {
+  background: #2f5bd3;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.appointment-card button:hover {
+  background: #1f3bb0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .appointment-page {
+    flex-direction: column;
+    padding: 40px 5%;
+    align-items: center;
+  }
+
+  .appointment-card h1 {
+    font-size: 28px;
+  }
+
+  .appointment-image img {
+    height: auto;
+  }
+
+  .appointment-card {
+    width: 100%;
+  }
+}

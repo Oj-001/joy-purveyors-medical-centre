@@ -1,0 +1,140 @@
+.footer {
+  background: #1E3A5F;
+  color: #fff;
+  padding-top: 50px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 0 40px 40px;
+}
+
+/* TITLES */
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.footer-section h3::after,
+.footer-section h4::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: #C0392B;
+  display: block;
+  margin-top: 8px;
+}
+
+/* TEXT */
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* LINKS */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-section ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #C0392B;
+  padding-left: 5px;
+}
+
+/* SOCIAL ICONS */
+.socials {
+  margin-top: 20px;
+}
+
+.socials a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #1E3A5F;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* BRAND COLORS */
+.socials a:nth-child(1):hover { background: #1877F2; color: #fff; } /* Facebook */
+.socials a:nth-child(2):hover { background: #E4405F; color: #fff; } /* Instagram */
+.socials a:nth-child(3):hover { background: #25D366; color: #fff; } /* WhatsApp */
+.socials a:nth-child(4):hover { background: #000000; color: #fff; } /* TikTok */
+.socials a:nth-child(5):hover { background: #000000; color: #fff; } /* X */
+
+.socials a:hover {
+  transform: translateY(-4px) scale(1.1);
+}
+
+/* CONTACT */
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.contact-list .icon {
+  margin-right: 10px;
+  color: #C0392B;
+  font-size: 16px;
+  min-width: 20px;
+}
+
+.contact-list li:hover .icon {
+  color: #ffffff;
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  background: #162B46;
+  padding: 15px;
+  font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 0 20px 30px;
+    text-align: center;
+  }
+
+  .contact-list li {
+    justify-content: center;
+  }
+
+  .socials a {
+    margin: 5px;
+  }
+}

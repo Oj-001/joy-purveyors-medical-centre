@@ -1,0 +1,114 @@
+.contact-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  padding: 60px 80px;
+  background: #F4F6F7;
+}
+
+/* FORM */
+.contact-form {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #1E3A5F;
+  position: relative;
+}
+
+.contact-form h2::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: #1E3A5F;
+  display: block;
+  margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  border-radius: 15px;
+  resize: none;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: #1E3A5F;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #C0392B;
+}
+
+/* RIGHT SIDE */
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.info-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.info-card h3 {
+  color: #1E3A5F;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* CALL NOW */
+.call-now {
+  grid-column: span 2;
+  font-size: 22px;
+  font-weight: bold;
+  color: #1E3A5F;
+  margin-top: 10px;
+}
+
+.call-now span {
+  color: #2E5BFF;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+
+  .call-now {
+    text-align: center;
+  }
+}
