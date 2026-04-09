@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import about from "../purveyors_images/about.jpg";
 
-import client1 from "../purveyors_images/jplogo.png";
-import client2 from "../purveyors_images/jplogo.png";
-import client3 from "../purveyors_images/jplogo.png";
-import client4 from "../purveyors_images/jplogo.png";
+import client1 from "../purveyors_images/omar.jpeg";
+import client2 from "../purveyors_images/cate.jpg";
+import client3 from "../purveyors_images/ouma.jpeg";
+import client4 from "../purveyors_images/oj.jpeg";
 
 function Home() {
 
