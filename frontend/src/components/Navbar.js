@@ -22,7 +22,7 @@ function Navbar() {
 
         {/* LOGO */}
         <div className="top-logo">
-          <img src="/purveyors_images/logo.png" alt="logo" />
+          <img src="/purveyors_images/jplogo.png" alt="logo" />
           {/* Put your logo inside: public/purveyors_images/logo.png */}
 
           <div>
