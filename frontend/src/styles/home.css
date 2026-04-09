@@ -1,112 +1,167 @@
-body {
+body, html {
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   font-family: Arial, sans-serif;
 }
 
 /* HERO */
 .hero {
   height: 90vh;
-  background: url('../purveyors_images/JoybackgroundIMG.png') no-repeat center/cover;
-  position: relative;
+  background: url("../purveyors_images/JoybackgroundIMG.png") no-repeat center/cover;
 }
-
-/* IMPORTANT:
-   Place image here:
-   public/purveyors_images/hero.jpg */
 
 .overlay {
   background: rgba(30, 58, 95, 0.75);
   height: 100%;
   display: flex;
   align-items: center;
-  padding-left: 80px;
+  padding-left: 10%;
 }
 
 .hero-content {
-  max-width: 600px;
   color: white;
+  max-width: 500px;
 }
 
-.hero-content h1 {
-  font-size: 52px;
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
-
-.hero-content p {
-  font-size: 18px;
-  margin-bottom: 25px;
-}
-
-.hero-buttons {
-  margin-top: 20px;
-}
-
+/* BUTTONS */
 .btn-primary {
   background: #C0392B;
   color: white;
   padding: 12px 25px;
-  margin-right: 10px;
-  text-decoration: none;
   border-radius: 5px;
-  font-weight: bold;
+  text-decoration: none;
 }
 
 .btn-secondary {
   background: white;
   color: #1E3A5F;
   padding: 12px 25px;
-  text-decoration: none;
   border-radius: 5px;
-}
-
-/* ABOUT */
-.about {
-  padding: 60px 40px;
-  text-align: center;
-  background: #F4F6F7;
-}
-
-/* SERVICES */
-.services {
-  padding: 60px 40px;
-  text-align: center;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.card {
-  background: #F4F6F7;
-  padding: 25px;
-  border-radius: 10px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.card:hover {
-  background: #1E3A5F;
-  color: white;
-  transform: translateY(-5px);
+  margin-left: 10px;
 }
 
 /* WHY */
-.why {
-  padding: 60px 40px;
-  background: #1E3A5F;
-  color: white;
-  text-align: center;
+.why-new {
+  padding: 80px 10%;
 }
 
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+.why-container {
+  display: flex;
+  align-items: stretch; /* KEY FIX */
+  gap: 40px;
+  min-height: 500px; /* ensures enough height */
+}
+.why-title {
+  color: #C0392B;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.why-heading {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: #1E3A5F;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.circle {
+  width: 35px;
+  height: 35px;
+  background: #1E3A5F;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  z-index: 2;
+}
+
+.circle.dark {
+  background: #0B2545;
+}
+
+.why-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.why-right {
+  flex: 1;
+  display: flex;
+  position: relative; /* ✅ CRITICAL FIX */
+  overflow: hidden;   /* prevents overflow issues */
+}
+
+.why-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills without distortion */
+  border-radius: 10px;
+}
+
+.emergency-card {
+  position: absolute;
+  bottom: 20px;   /* stick to bottom of image */
+  left: 20px;     /* align nicely */
+  background: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 5;     /* stays above image only */
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  padding: 80px 10%;
+  background: url("../purveyors_images/comprehensivecare.jpg") no-repeat right/cover;
+}
+
+.testimonials-content {
+  background: #f5f5f5;
+  padding: 40px;
+  max-width: 600px;
+  position: relative;
+}
+
+.testimonial-header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.testimonial-quote {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 60px;
+  color: #1E3A5F;
 }
 
 /* CTA */
@@ -114,23 +169,102 @@ body {
   background: #C0392B;
   color: white;
   text-align: center;
-  padding: 60px 20px;
+  padding: 60px;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
 
-  .overlay {
-    padding: 20px;
-    text-align: center;
-    justify-content: center;
+/* Tablet */
+@media (max-width: 992px) {
+
+  .why-container {
+    flex-direction: column;
+  }
+
+  .why-right img {
+    height: auto;
+  }
+
+  .why-heading {
+    font-size: 28px;
   }
 
   .hero-content h1 {
-    font-size: 32px;
+    font-size: 36px;
   }
 
-  .hero-content p {
-    font-size: 16px;
+  .testimonials-content {
+    max-width: 100%;
   }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .overlay {
+    padding-left: 0;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-secondary {
+    margin-left: 0;
+  }
+
+  .timeline {
+    margin-left: 0;
+  }
+
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    flex-direction: row;
+  }
+
+  .circle {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .emergency-card {
+    position: static;
+    margin-top: 15px;
+  }
+
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+
+  .hero-content h1 {
+    font-size: 22px;
+  }
+
+  .why-heading {
+    font-size: 22px;
+  }
+
+  .testimonial-quote {
+    font-size: 40px;
+  }
+
 }

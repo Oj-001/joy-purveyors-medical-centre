@@ -3,10 +3,10 @@ import heroBg from '../purveyors_images/JoybackgroundIMG.png';
 
 // 👇 add your images here
 import doctorsImg from '../purveyors_images/about.jpg';
-import expertImg from '../purveyors_images/about.jpg';
-import techImg from '../purveyors_images/about.jpg';
-import careImg from '../purveyors_images/about.jpg';
-import patientImg from '../purveyors_images/about.jpg';
+import expertImg from '../purveyors_images/medicalexpert.jpg';
+import techImg from '../purveyors_images/moderntech.jpg';
+import careImg from '../purveyors_images/comprehensivecare.jpg';
+import patientImg from '../purveyors_images/patientCenteredcare.jpg';
 
 function About() {
   return (
