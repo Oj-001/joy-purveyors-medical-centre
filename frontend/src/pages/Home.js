@@ -12,28 +12,28 @@ function Home() {
 
   const testimonials = [
     {
-      name: "Ralph Gonzales",
+      name: "Hanningtone Ochieng",
       role: "Patient",
       image: client1,
-      text: "Excellent service and caring doctors. I felt safe and well attended."
+      text: "I am grateful for the outstanding service I received at Joy Purveyors Hospital. The team demonstrated high levels of expertise and empathy throughout my treatment. Communication was clear, and follow-up care was impressive. It is a facility that genuinely prioritizes patient well-being and delivers healthcare with professionalism and respect."
     },
     {
-      name: "Sarah Mitchell",
+      name: "Catherine Chepkorir",
       role: "Patient",
       image: client2,
-      text: "Modern equipment and very friendly staff. Highly recommended!"
+      text: "My visit to Joy Purveyors Hospital was truly reassuring. The staff handled my case with urgency and compassion, making me feel safe and well cared for. Their modern facilities and efficient service delivery stood out. I appreciate the effort they put into patient care and would confidently recommend them."
     },
     {
-      name: "James Carter",
+      name: "Anthony Ouma",
       role: "Patient",
       image: client3,
-      text: "Quick response and professional care. Truly impressive service."
+      text: "Joy Purveyors Hospital exceeded my expectations in every way. From the reception to the treatment rooms, everything was well organized. The medical staff showed genuine care and professionalism. I felt valued as a patient, and my recovery process was smooth thanks to their continuous support and dedication."
     },
     {
-      name: "Linda Brown",
+      name: "Daniel Ojulu",
       role: "Patient",
       image: client4,
-      text: "Affordable and reliable healthcare. I trust this hospital."
+      text: "I had an excellent experience at Joy Purveyors Hospital. The doctors were attentive, professional, and took time to explain my condition clearly. The nurses were kind and responsive, ensuring I was comfortable throughout my stay. The environment was clean and welcoming. I highly recommend their services to anyone seeking quality healthcare."
     }
   ];
 
